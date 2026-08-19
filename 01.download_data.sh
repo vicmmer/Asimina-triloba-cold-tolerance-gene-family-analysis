@@ -1,19 +1,21 @@
 #!/bin/bash
 
 # ============================================================
-# Download genome, protein, and annotation data
+# Purpose:
+#   Downloads and organizes the genome assemblies, protein sequences, and
+#   genome annotations used in the gene family analysis. Downloaded protein
+#   files are kept unfiltered at this stage for downstream filtering.
 #
-# Genomes:
-#   genome_sequences/
+# Inputs:
+#   - Public genome resources from UMA and CNCB (downloaded with wget)
+#   - Persea americana data downloaded manually (not handled by this script but source listed on README file)
+#   - Asimina triloba data available locally (not handled by this script)
 #
-# Original/unfiltered proteins:
-#   unfiltered_protein_sequences/
-#
-# Annotations:
-#   annotations/
-#
-# Raw downloaded files:
-#   downloads/
+# Outputs:
+#   - downloads/                     Raw compressed downloaded files
+#   - genome_sequences/              Uncompressed genome FASTA files
+#   - unfiltered_protein_sequences/  Uncompressed protein FASTA files
+#   - annotations/                   Uncompressed GFF annotation files
 # ============================================================
 
 

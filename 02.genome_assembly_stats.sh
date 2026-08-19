@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# ==============================================================================
+# Purpose:
+#   Calculates basic genome assembly statistics for each species to summarize
+#   assembly size and contiguity before downstream gene family analysis.
+#
+# Inputs:
+#   - genome_sequences/*.fa   Genome assembly FASTA files
+#   - FastaSeqStats           Perl script used to calculate assembly statistics
+#
+# Outputs:
+#   - preprocessing_results/genome_stats.tsv
+#     Tab-separated summary containing sequence count, total assembly size (Gb),
+#     longest sequence (Mb), N50 (Mb), and L50 for each genome assembly.
+# ==============================================================================
+
 # Create preprocessing results directory if it does not already exist
 mkdir -p preprocessing_results
 

@@ -1,33 +1,17 @@
 #!/bin/bash
 
-# ==============================================================================
-# Filter chromosome/pseudomolecule-anchored proteins
+# ============================================================
+# Filter protein FASTAs to chromosome/pseudomolecule-anchored
+# proteins only.
 #
-# Purpose:
-#   Filters species protein FASTA files to retain only proteins assigned to
-#   chromosomes. Filtering is based on the
-#   species-specific sequence identifiers present in each FASTA header.
-#   Species whose protein sets are already entirely chromosome-anchored are
-#   copied without filtering.
-#
-# Inputs:
-#   unfiltered_protein_sequences/
-#       Protein FASTA files for each species prior to chromosome filtering.
+# IMPORTANT:
+# Original files in protein_sequences/ are NEVER modified.
 #
 # Outputs:
-#   protein_sequences/
-#       Filtered protein FASTAs containing chromosome-anchored proteins.
-#
+#   protein_sequences_anchored/
 #   preprocessing_results/protein_filter_summary.tsv
-#       Total, retained, and removed protein counts and percent retained
-#       for each species.
-#
 #   preprocessing_results/protein_filter_by_chromosome.tsv
-#       Number of retained proteins assigned to each chromosome/linkage group.
-#
-# Note:
-#   Original FASTA files in unfiltered_protein_sequences/ are never modified.
-# ==============================================================================
+# ============================================================
 
 
 # ----------------------------

@@ -230,5 +230,4 @@ echo
 echo "Annotations:"
 ls -lh annotations/*.gff
 echo
-~
-~
+
